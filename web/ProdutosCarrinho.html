@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Exercicio BootStrap</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">        
+       <script type="text/javascript" src="js/CarrinhoDeCompras.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="row">
+                    <div>
+                        <div class="container-fluid">                           
+                            <iframe class="col-md-12"  src="topo.html" style=" border: none;" scrolling="no" ></iframe>                            
+                        </div>
+                    </div>
+                </div>                            
+            </header>
+            <section>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <article>
+                            <div>
+                                <div class="navbar-header">
+                                    <h1><span  class="label label-info">Produtos do Carrinho</span></h1>
+                                </div>
+                                <div class="panel-heading">
+
+                                </div>
+                                <!-- Table -->
+                                <table class="table table-striped">
+                                    <tr>
+                                        <th>
+                                            Nome
+                                        </th>
+                                        <th>
+                                            Valor
+                                        </th>
+                                        <th>    
+                                            Quantidade
+                                        </th>
+                                        <th>          
+                                            Valor Total
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" id="itensCarrinho"></td>
+                                    </tr>                                                                 
+                                    <tr>
+                                        <td colspan="4" >                                 
+                                            <nav aria-label="...">
+                                                <ul class="pager">
+                                                    <li><a href="#" id="botaoRemover">Cancelar Todos</a></li>
+                                                    <li><a href="#" id="botaoMostrar">Mostrar</a></li>
+                                                    <li><a href="#">Finalizar Compra</a></li>
+                                                    <li><a href="Home.html">Continuar Comprando</a></li>
+                                                </ul>
+                                            </nav>
+                                        </td>
+                                    </tr>                                    
+                                </table>                               
+                            </div>
+                        </article>
+                    </div>                    
+                </div>
+            </section>
+            <footer>           
+            </footer>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            document.getElementById("botaoMostrar").addEventListener("click", listarProdutos);            
+            document.getElementById("botaoRemover").addEventListener("click", esvaziarCarrinho);
+        </script>        
+    </body>
+</html>
